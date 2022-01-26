@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400&display=swap');
+:root{
+    --text-color: white;
+}
+
+div{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.header{
+    background-color: white;
+    /* 브라우저 상단에 header 부착 기능. 제거 가능. */
+    position: sticky;
+    top:0;
+}
+
+.nav{
+    border-bottom: 0.1px solid rgba(255, 255, 255, 0.308);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.picture{
+    height: 40px;
+    display: block;
+}
+
+#logo{
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+.nav_container{
+    display: flex;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    justify-content: center;
+}
+
+.nav_container li:hover {
+    background-color: #b3b1b188;
+    border-radius: 0px;
+}
+
+#button{
+    display: inline;
+    padding: 9.5px 20px;
+    position: relative;
+    cursor: pointer;
+    min-width: 59px;
+}
+
+.nav_icon{
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+}
+
+.sign_button{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    display: flex;
+}
+
+@media screen and (max-width:894px){
+    .nav{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+    
+    .nav_container{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .nav_container li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav_icon{
+        display: block;
+    }
+
+    .sign_button{
+        justify-content: center;
+        width: 100%;
+        display: none;
+    }
+
+    .nav_container.active,
+    .sign_button.active{
+        display: flex;
+    }
+}
+
+/**/
+/* 상단 페이지 */
+/**/
+
+.top_front{
+    text-align: center;
+}
+
+.top_front #welcome_text{
+    background: linear-gradient(to right,#FFA17F,#00223E);
+    color: white;
+    padding: 4rem;
+    padding-bottom: 8rem;
+}
+
+.top_front #link_buttons{
+    margin-top:-5rem;
+}
+/* 상단 페이지 end */
+
+/**/
+/* 하단 페이지 */
+/**/
+#inline_manager{
+    display:inline;
+}
+
+#grid_manager{
+    display:grid;
+}
+
+.down_front{
+    padding: 3rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.d_day_title_top{
+    width: 400px;
+}
+
+.d_day_title_top ul{
+    padding:0;
+    justify-content: space-between;
+}
+
+.d_day_title_top ul li{
+    display:inline;
+}
+
+.d_day_title{
+    float:left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width:100PX;
+    height:270px;
+}
+
+.d_day_title button{
+    display:block;
+    background-color: inherit;
+    color:black;
+    padding:18px 16px;
+    width:100%;
+    border:none;
+    outline:none;
+    text-align: left;
+    cursor: pointer;
+}
+
+.d_day_title button:hover{
+    background-color: #ddd;
+}
+
+.d_day_title button:active{
+    background-color: #ccc;
+}
+
+.d_day_content {
+    padding: 0px;
+    padding-left: 125px;
+    border: 1px solid #ccc;
+    width: 100%%;
+    border-left: none;
+    height: 270px;
+    display: none;
+}
+/* 하단 페이지 end */
+
+h1{
+    margin: 0px;
+}
+
+body{
+    margin: 0px;
+}
+
+html{
+    height:200%
+}

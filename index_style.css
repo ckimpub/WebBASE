@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400&display=swap');
+:root{
+    --text-color: white;
+}
+
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.global_align_center{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.header{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 8px 24px;
+    border-bottom: 0.1px solid rgba(129, 129, 129, 0.692);
+    /* 브라우저 상단에 header 부착 기능. 제거 가능. */
+    position: sticky;
+    top:0;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.picture{
+    height: 40px;
+    display: block;
+}
+
+#logo{
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+.nav_container{
+    display: flex;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    justify-content: center;
+}
+
+.nav_container li:hover {
+    background-color: #b3b1b13f;
+    border-radius: 4px;
+}
+
+#button{
+    display: inline;
+    padding: 9.5px 10px;
+    position: relative;
+    cursor: pointer;
+    min-width: 59px;
+}
+
+.nav_icon{
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+}
+
+.sign_button{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    display: flex;
+}
+
+@media screen and (max-width:805px){
+    header{
+        min-width: 276px;
+    }
+    
+    .nav{
+        flex-direction: column;
+        align-items: flex-start;
+        padding-right: 0px;
+    }
+    
+    .nav_container{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .nav_container li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav_icon{
+        display: block;
+        padding-top: 2px;
+    }
+
+    .sign_button{
+        justify-content: center;
+        width: 100%;
+        display: none;
+    }
+
+    .nav_container.active,
+    .sign_button.active{
+        display: flex;
+    }
+}
+
+/**/
+/* 상단 페이지 */
+/**/
+
+.top_front{
+    display: block;
+
+    /* background: linear-gradient(to right,#FFA17F,#00223E); */
+    margin: 3rem 5rem;
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+input{
+    width: 800px;
+    height: 38px;
+    font-size: 16px;
+    padding: 0px;
+    padding-left: 10px;
+    outline: none;
+    border: 1px solid rgba(155, 154, 154, 0.541);
+    border-right: none;
+    border-radius: 4px 0px 0px 4px;
+}
+
+#search_button{
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    border: 1px solid rgba(155, 154, 154, 0.541);
+    border-left: none;
+    border-radius: 0px 4px 4px 0px;
+    background-color: white;
+}
+
+#search_button:hover{
+    background-color: #b3b1b188;
+    transition: 0.3s;
+}
+
+/* 상단 페이지 end */
+
+/**/
+/* 하단 페이지 */
+/**/
+#inline_manager{
+    display:inline;
+}
+
+#grid_manager{
+    display:grid;
+}
+
+.d_day{
+    display:block;
+    padding-left: 40px;
+}
+
+.down_front{
+    margin: 3rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.d_day_title_top{
+    width: 400px;
+}
+
+.d_day_title_top ul{
+    padding:0;
+    justify-content: space-between;
+}
+
+.d_day_title_top ul li{
+    display:inline;
+}
+
+.d_day_title{
+    float:left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width:100PX;
+    height:190px;
+}
+
+.d_day_title button{
+    display:block;
+    background-color: inherit;
+    color:black;
+    padding:10px 16px;
+    width:100%;
+    border:none;
+    outline:none;
+    text-align: left;
+    cursor: pointer;
+}
+
+.d_day_title button:hover{
+    background-color: #ddd;
+}
+
+.d_day_title button:active{
+    background-color: #ccc;
+}
+
+.d_day_content {
+    float:left;
+    padding: 0px;
+    padding-left: 12px;
+    border: 1px solid #ccc;
+    width: 85%;
+    border-left: none;
+    height: 190px;
+    display: none;
+}
+
+.d_day_content_list{
+    display: flex;
+    margin: 3px 0px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.information{
+    width:100%;
+    margin-top: 25px;
+    display: grid;
+}
+
+.information_inner{
+    border:1px solid black;
+    display: block;
+    padding:35px;
+    margin-bottom: 4.5%;
+    height:278px;
+    width:82.5%;
+}
+
+.information_inner li{
+    list-style: none;
+}
+
+.d_day_icon{
+    display: inline-block;
+    width:35px;
+    text-align:center;
+    padding:1px 3px;
+    margin-right:6px;
+    border-radius:4px;
+    color: #fff;
+    font-size: 13px;
+    font-family:Roboto;
+}
+
+#all.d_day_content li{
+    list-style: none;
+}
+/* 하단 페이지 end */
+
+/* footer */
+footer{
+    background-color: darkgray;
+}
+/* footer */
+
+h1{
+    margin: 0px;
+}
+
+body{
+    margin: 0px;
+}
+
+html{
+    height:200%
+}

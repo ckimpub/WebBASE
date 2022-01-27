@@ -11,7 +11,6 @@ toggleBtn.addEventListener('click', () => {
     sign.classList.toggle('active');
 })
 
-
 function openContent(evt, contentName) {
     // Declare all variables
     var i, d_day_content, d_day_title_links;

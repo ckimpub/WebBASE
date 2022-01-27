@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>계명대학교 공과대학 컴퓨터공학전공</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index_style.css">
     <script src="function.js" defer></script>
     <script src="https://kit.fontawesome.com/e21810c481.js" crossorigin="anonymous"></script>
 </head>
@@ -16,15 +16,15 @@
                 <img id="logo" src="wb.png" alt="">
             </div>
             <ul class="nav_container">
-                <li id="button"><a href="">학과소개</a></li>
-                <li id="button"><a href="">교과과정</a></li>
-                <li id="button"><a href="">자료실</a></li>
-                <li id="button"><a href="">커뮤니티</a></li>
-                <li id="button"><a href="">교수진</a></li>
+                <li id="button" class="global_align_center"><a href="">학과소개</a></li>
+                <li id="button" class="global_align_center"><a href="">교과과정</a></li>
+                <li id="button" class="global_align_center"><a href="">자료실</a></li>
+                <li id="button" class="global_align_center"><a href="">커뮤니티</a></li>
+                <li id="button" class="global_align_center"><a href="">교수진</a></li>
             </ul>
             <ul class="sign_button">
-                <li id="button">로그인</li>
-                <li id="button">회원가입</li>
+                <li id="button" class="global_align_center">로그인</li>
+                <li id="button" class="global_align_center">회원가입</li>
             </ul>
             <a href="#" class="nav_icon" onclick="toogleBtn()">
                 <i class="fas fa-bars"></i>
@@ -32,17 +32,21 @@
         </nav>
     </header>
     <main>
-        <div class="top_front">
+        <div class="top_front global_align_center">
             <div id="welcome_text">
                 <h1>컴퓨터공학은, 모든 것의 시작점입니다.</h1>
-                <h2>컴퓨터와 정보, 인공지능 등의 전범위를 다루는 컴퓨터공학전공은<br>가장 뛰어난 교수진과 학생들이 모여 끊임없이 탐구하고 발전합니다.<br>하드웨어에서 소프트웨어까지, 그리고
-                    알고리즘에서 AI에 이르기까지,<br>우리의 작업은 세상을 바꿉니다.</h2>
+                <!-- <h2>컴퓨터와 정보, 인공지능 등의 전범위를 다루는 컴퓨터공학전공은<br>가장 뛰어난 교수진과 학생들이 모여 끊임없이 탐구하고 발전합니다.<br>하드웨어에서 소프트웨어까지, 그리고
+                    알고리즘에서 AI에 이르기까지,<br>우리의 작업은 세상을 바꿉니다.</h2> -->
             </div>
-            <div id="link_buttons">
+            <div class="search global_align_center">
+                <input type="text" placeholder="응애">
+                <button id="search_button" type="submit"><i class="fas fa-search"></i></button>
+            </div>
+            <!-- <div id="link_buttons">
                 <a href=""><img width=384px src="sea_otter.jpg" alt="공지사항"></a>
                 <a href=""><img width=384px src="sea_otter.jpg" alt="커뮤니티"></a>
                 <a href=""><img width=384px src="sea_otter.jpg" alt="자료실"></a>
-            </div>
+            </div> -->
         </div>
 
         <div class="down_front">
@@ -50,8 +54,8 @@
 
                 <div class="d_day_title_top">
                     <ul>
-                        <li>D-Day</li>
-                        <li style="font-size:12px;"><a href="">더 보기</a></li>
+                        <li>일정</li>
+                        <li style="font-size:12px;"><a href="schedule.html">더 보기</a></li>
                     </ul>
                 </div>
 
@@ -68,30 +72,114 @@
                         onmouseover="openContent(event, 'scholarship')">장학금</button>
                 </div>
 
-                <div id="all" class="d_day_content">
-                    <p>D-0 / all</p>
+                <!--
+
+                    리팩토링 단계에서 일정 기능 부분은 화면이 꽉 차게끔(컨테이너 개념을 활용) 재설계 필요.
+
+                -->
+                <div class="d_day_inner">
+                    <div id="all" class="d_day_content">
+                        <li class="d_day_content_list">
+                            <span class="d_day_icon" style="background-color: darkorange;">D-3</span>
+                            <a href="" title="2022학년도 수강신청 안내">2022학년도 수강신청 안내</a>
+                        </li>
+                        <li class="d_day_content_list">
+                            <span class="d_day_icon" style="background-color: darkblue;">D-12</span>
+                            <a href="" title="2022학년도 입학환영회 신청">2022학년도 입학환영회 신청</a>
+                        </li>
+                        <li class="d_day_content_list">
+                            <span class="d_day_icon" style="background-color: darkorange;">D-3</span>
+                            <a href="" title="2022학년도 수강신청 안내">2022학년도 수강신청 안내</a>
+                        </li>
+                        <li class="d_day_content_list">
+                            <span class="d_day_icon" style="background-color: darkorange;">D-3</span>
+                            <a href="" title="2022학년도 수강신청 안내">2022학년도 수강신청 안내</a>
+                        </li>
+                        <li class="d_day_content_list">
+                            <span class="d_day_icon" style="background-color: darkorange;">D-3</span>
+                            <a href="" title="2022학년도 수강신청 안내">2022학년도 수강신청 안내</a>
+                        </li>
+                        <li class="d_day_content_list">
+                            <span class="d_day_icon" style="background-color: darkorange;">D-3</span>
+                            <a href="" title="2022학년도 수강신청 안내">2022학년도 수강신청 안내</a>
+                        </li>
+                        <li class="d_day_content_list">
+                            <span class="d_day_icon" style="background-color: darkorange;">D-3</span>
+                            <a href="" title="2022학년도 수강신청 안내">2022학년도 수강신청 안내</a>
+                        </li>
+                        <li class="d_day_content_list">
+                            <span class="d_day_icon" style="background-color: darkorange;">D-3</span>
+                            <a href="" title="2022학년도 수강신청 안내">2022학년도 수강신청 안내</a>
+                        </li>
+                        <!-- Maximum of lists. -->
+                    </div>
+                    <div id="undergraduate" class="d_day_content">
+                        <p>D-0 / undergraduate</p>
+                    </div>
+                    <div id="graduate" class="d_day_content">
+                        <p>D-0 / graduate</p>
+                    </div>
+                    <div id="contest" class="d_day_content">
+                        <p>D-0 / contest</p>
+                    </div>
+                    <div id="scholarship" class="d_day_content">
+                        <p>D-0 / scholarship</p>
+                    </div>
                 </div>
-                <div id="undergraduate" class="d_day_content">
-                    <p>D-0 / undergraduate</p>
+
+
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="information">
+                <div class="information_inner" style="grid-row: 1; grid-column: 1;">
+                    <li>
+                        <a href="" title="2022학년도 수강신청 안내">
+                            <span class="d_day_icon" style="background-color: darkorange;">D-3</span>
+                            2022학년도 수강신청 안내
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" title="2022학년도 입학환영회 신청">
+                            <span class="d_day_icon" style="background-color: darkblue;">D-12</span>
+                            2022학년도 입학환영회 신청
+                        </a>
+                    </li>
                 </div>
-                <div id="graduate" class="d_day_content">
-                    <p>D-0 / graduate</p>
+                <div class="information_inner" style="grid-row: 1; grid-column: 2;">
+                    <li>
+                        <a href="" title="2022학년도 수강신청 안내">
+                            <span class="d_day_icon" style="background-color: darkorange;">D-3</span>
+                            2022학년도 수강신청 안내
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" title="2022학년도 입학환영회 신청">
+                            <span class="d_day_icon" style="background-color: darkblue;">D-12</span>
+                            2022학년도 입학환영회 신청
+                        </a>
+                    </li>
                 </div>
-                <div id="contest" class="d_day_content">
-                    <p>D-0 / contest</p>
+                <div class="information_inner" style="grid-row: 2; grid-column: 1;">
+
                 </div>
-                <div id="scholarship" class="d_day_content">
-                    <p>D-0 / scholarship</p>
-                </div>
-                
-                <div class="d_day_video">
+                <div class="information_inner" style="grid-row: 2; grid-column: 2;">
 
                 </div>
             </div>
         </div>
-
-
     </main>
+    <footer>
+        <div class="header">
+            <dl>
+                <dt>성서캠퍼스</dt>
+                <dd>(우)42601 대구광역시 달서구 달구벌대로 1095 계명대학교 성서캠퍼스 TEL 053.580.5114</dd>
+
+                <dt>대명캠퍼스</dt>
+                <dd>(우)42403 대구광역시 남구 명덕로 104 계명대학교 대명캠퍼스 TEL 053.580.5114</dd>
+            </dl>
+        </div>
+    </footer>
 </body>
 
 </html>

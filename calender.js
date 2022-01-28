@@ -1,4 +1,4 @@
-const date = new Date();
+let date = new Date();
 
 const renderCalendar = () => {
     const viewYear = date.getFullYear();
@@ -17,9 +17,9 @@ const renderCalendar = () => {
     const TLDate = thisLast.getDate();
     const TLDay = thisLast.getDay();
 
-    // Dates 기본 배열들
+    // Dates배열
     const prevDates = [];
-    const thisDates = [...Array(TLDate + 1).keys()].slice(1);
+    const thisDates = [...Array(TLDate + 1).keys()].slice(1);   ///길이가 TLDate + 1인 배열의 요소들을 한개씩 (TLDate + 1)만큼 넣은 배열
     const nextDates = [];
 
     // prevDates 계산
@@ -38,12 +38,47 @@ const renderCalendar = () => {
     const dates = prevDates.concat(thisDates, nextDates);
 
     // Dates 정리
+    const firstDateIndex = dates.indexOf(1);
+    const lastDateIndex = dates.lastIndexOf(TLDate);
+
     dates.forEach((date, i) => {
-        dates[i] = `<div class="date">${date}</div>`;
+        const condition = i >= firstDateIndex && i < lastDateIndex + 1
+            ? 'this'
+            : 'other';
+            ///삼항 조건 연산자 조건문 ? 참 : 거짓
+        dates[i] = `<div class="date"><span class="${condition}">${date}</span></div>`;
     })
 
     // Dates 그리기
     document.querySelector('.dates').innerHTML = dates.join('');
+
+    const today = new Date;
+    if (viewMonth === today.getMonth() && viewYear === today.getFullYear()) {
+        for (let date of document.querySelectorAll('.this')) {
+            if (+date.innerText === today.getDate()) {
+                date.classList.add('today');
+                break;
+            }
+        }
+    }
 }
 
 renderCalendar();
+
+const prevMonth = () => {
+    date.setDate(1);
+    date.setMonth(date.getMonth() - 1);
+    renderCalendar();
+}
+
+const nextMonth = () => {
+    date.setDate(1);
+    date.setMonth(date.getMonth() + 1);
+    renderCalendar();
+}
+
+const goToday = () => {
+    date = new Date();
+    renderCalendar();
+}
+

@@ -288,9 +288,58 @@ input{
 /* footer */
 footer{
     background-color: darkgray;
+    display: flex;
+    padding : 3rem 5rem;
+}
+
+footer div{
+    width:33%;
+    border-left: 1px solid black;
+}
+
+footer div:first-child{
+    border-left: 0;
+}
+
+footer .address dl dt{
+    background: url("footer_icon1.svg") no-repeat center left;
+    padding-left:25px;
+}
+
+footer .address dl dd span{
+    display: block;
+}
+
+.quick_button{
+    text-align: right;
+}
+
+.quick_button img{
+    width: 45%;
+    display: grid;
+    border:1px solid black;
+}
+
+#footer_icon1{
+    grid-row: 1;
+    grid-column: 1;
+}
+
+#footer_icon2{
+    grid-row: 1;
+    grid-column: 2;
+}
+
+#footer_icon3{
+    grid-row: 2;
+    grid-column: 1;
+}
+
+#footer_icon4{
+    grid-row: 2;
+    grid-column: 2;
 }
 /* footer */
-
 h1{
     margin: 0px;
 }
